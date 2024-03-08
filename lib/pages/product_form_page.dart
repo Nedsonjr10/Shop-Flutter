@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/models/product.dart';
@@ -87,8 +89,10 @@ class _ProductFormPageState extends State<ProductFormPage> {
         listen: false,
       ).saveProduct(_formData);
 
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pop();
     } catch (error) {
+      // ignore: use_build_context_synchronously
       await showDialog<void>(
         context: context,
         builder: (ctx) => AlertDialog(
